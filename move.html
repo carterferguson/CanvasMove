@@ -15,10 +15,18 @@
             setInterval(mainloop, 1000/50);
         }
     
+        var Xpos = 0;
+        var Ypos = 0;
+        var Psize = 20;
+        var pXspeed = 2;
+        var pYspeed = 3;
+
+
+
     
         function mainloop(){
             colorRect(0,0,canvas.width,canvas.height,'black');
-            colorRect(0,0,20,20,'red');
+            colorRect(Xpos,Ypos,Psize,Psize,'red');
 
 
 
