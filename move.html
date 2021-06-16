@@ -17,21 +17,32 @@
     
         var Xpos = 0;
         var Ypos = 0;
-        var Psize = 20;
+        var Psize = 40;
         var pXspeed = 2;
         var pYspeed = 3;
 
-
+        var player = new Image()
+        player.src = 'images/player.png';
 
     
         function mainloop(){
             colorRect(0,0,canvas.width,canvas.height,'black');
-            colorRect(Xpos,Ypos,Psize,Psize,'red');
-
+            drawImage(player,0,0,32,42,Xpos,Ypos,Psize,Psize);
 
 
         }
     
+
+        function drawImage(src,sx,sy,sw,sh,dx,dy,dw,dh){
+            canvasContext.drawImage(src,sx,sy,sw,sh,dx,dy,dw,dh)
+
+            
+
+        }
+        
+
+
+
         function colorRect(x,y,w,h,c){
             canvasContext.fillStyle = c;
             canvasContext.fillRect(x,y,w,h);
